@@ -16,11 +16,13 @@ public class Course {
 //	int  starts ;
 //	int ends ;
 //	String department;
+	public int available;
 	
 	
 	Course (int course_Id){
 			this.course_students = new ArrayList<Student>();
 			this.course_Id = course_Id;
+			this.available=30;
 	}
 
 
@@ -33,6 +35,7 @@ public class Course {
 		return this.course_students;
 	}
 	
-	
+	public void add(Student stu)
+	{this.course_students.add(stu);}
 	
 }
