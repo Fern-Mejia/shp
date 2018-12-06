@@ -28,7 +28,7 @@ public class Course {
 
 	@Override
 	public String toString() {
-		return Integer.toString(course_Id) + name;
+		return Integer.toString(course_Id) +"  "+ name;
 	}
 
 

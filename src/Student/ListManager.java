@@ -24,7 +24,7 @@ public class ListManager {
 		/*for(Student student :this.Students.List) {
 			System.out.println(student.toString());		
 		}*/
-		for(Course course :this.Courses.List) {
+		for(Course course :this.Courses.getList()) {
 			System.out.println(course.toString());		
 		}
 	}

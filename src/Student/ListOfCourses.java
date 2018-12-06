@@ -10,8 +10,7 @@ import ClassHistory.Course;
 
 public class ListOfCourses {
 	ArrayList<Course> List= new ArrayList<Course>();
-	public ArrayList<Course> ListOfCoursess() {
-		
+	public ListOfCourses() {
 		try
 	    {	
 			String myUrl ="jdbc:mysql://israel-java.com/SHP_DB";
@@ -24,18 +23,18 @@ public class ListOfCourses {
 		     while(rs.next()){
 		    	  int course_Id = rs.getInt("course_Id");
 		    	  String name= rs.getString("name");
-		    	  List.add(new Course(course_Id,name));
-		    	  
+		    	  List.add(new Course(course_Id,name));  	  
 		     }	      
 		     
 	    }catch(Exception e ) {
 	    	System.out.println(e);
-	    	return null;
+	    	
 
 	    } 
-		return List;
+		
 	}
-
+	public ArrayList<Course> getList()
+	{return this.List;}
 	
 
 }
