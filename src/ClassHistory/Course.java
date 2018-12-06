@@ -7,7 +7,7 @@ public class Course {
 
 	public ArrayList<Student> course_students;
 	int course_Id;
-//	String name ;
+	String name ;
 //	int section;
 //	int  course;
 //	int year;
@@ -19,15 +19,16 @@ public class Course {
 	public int available;
 	
 	
-	Course (int course_Id){
+	public Course (int course_Id, String name){
 			this.course_students = new ArrayList<Student>();
 			this.course_Id = course_Id;
+			this.name=name;
 			this.available=30;
 	}
 
-
+	@Override
 	public String toString() {
-		return "Course [course_students=" + course_students.size() + ", course_Id=" + course_Id + "]";
+		return Integer.toString(course_Id) + name;
 	}
 
 
