@@ -9,7 +9,6 @@ import java.sql.Statement;
 
 
 public class StudentDownload {
-
 	public static void main(String[] args) throws SQLException {
 		String myUrl ="jdbc:mysql://israel-java.com/SHP_DB";
 	    Connection conn = DriverManager.getConnection(myUrl, "team", "SHPpassword!102" );
@@ -20,5 +19,4 @@ public class StudentDownload {
 			student.fullAdd(ListC.getList(), conn);	
 		}
 	}
-
 }

@@ -10,7 +10,7 @@ public class Student {
 		String Fname ;
 		String Lname;
 		Schedule schedule;
-		ArrayList<Course> courses;
+		ArrayList<Course> courses= new ArrayList<Course>();
 		int units;
 		 
 		Student(int id ,String Fname , String Lname ){
@@ -46,6 +46,7 @@ public class Student {
 	public void add(Course course, Connection conn)
 	{
 	course.add(this);
+	this.courses.add(course);
 	this.units=this.units+3;
 	course.added();
 	try {

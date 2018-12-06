@@ -20,5 +20,4 @@ public class ShowSchedule {
 			System.out.println(course.toString());		
 		}
 	}
-
 }
