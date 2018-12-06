@@ -20,10 +20,14 @@ public class ListManager {
 		return this.Courses;
 	}
 	
-	public void print() {	
+	public void printStudents() {	
 		for(Student student :this.Students.List) {
 			System.out.println(student.toString());		
 		}
+		
+	}
+	
+	public void printCourses() {	
 		for(Course course :this.Courses.getList()) {
 			System.out.println(course.toString());		
 		}

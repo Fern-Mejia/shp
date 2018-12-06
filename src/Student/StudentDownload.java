@@ -11,7 +11,7 @@ public class StudentDownload {
 
 	public static void main(String[] args) {
 		ListManager listM= new ListManager();
-		listM.print();
+		listM.printCourses();
 	}
 
 }
