@@ -2,13 +2,12 @@ package Student;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
+import java.util.ArrayList;
 
+import ClassHistory.Course;
 
-
-public class StudentDownload {
+public class ShowSchedule {
 
 	public static void main(String[] args) throws SQLException {
 		String myUrl ="jdbc:mysql://israel-java.com/SHP_DB";
@@ -16,8 +15,9 @@ public class StudentDownload {
 		ListManager listM= new ListManager();
 		ListOfCourses ListC= listM.getListOfCourses();
 		ListOfStudents ListS= listM.getListOfStudents();
-		for(Student student :ListS.getList()) {
-			student.fullAdd(ListC.getList(), conn);	
+		ArrayList<Course> sampleList=ListS.getList().get(1).getClassSchedule(conn);
+		for(Course course :sampleList) {
+			System.out.println(course.toString());		
 		}
 	}
 
